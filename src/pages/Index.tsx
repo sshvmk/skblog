@@ -1,6 +1,6 @@
-
 import { Header } from "@/components/header";
 import { BlogCard } from "@/components/blog-card";
+import { Footer } from "@/components/footer";
 
 const PLACEHOLDER_POSTS = [
   {
@@ -28,9 +28,9 @@ const PLACEHOLDER_POSTS = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <main className="container max-w-3xl py-12">
+      <main className="container max-w-3xl py-12 flex-grow">
         {/* Intro Section */}
         <section className="mb-16">
           <h1 className="text-4xl font-bold tracking-tight mb-4">
@@ -52,6 +52,7 @@ const Index = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };
