@@ -1,6 +1,6 @@
 
-import { BlogCard } from "@/components/blog-card";
 import { Header } from "@/components/header";
+import { BlogCard } from "@/components/blog-card";
 import { MathBlock } from "@/components/ui/math-block";
 import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 import { PDFPreview } from "@/components/ui/pdf-preview";
@@ -30,34 +30,52 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="container py-12">
-        <h1 className="text-3xl font-bold tracking-tight mb-8">Latest Posts</h1>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {PLACEHOLDER_POSTS.map((post) => (
-            <BlogCard key={post.title} {...post} />
-          ))}
-        </div>
-        
-        {/* Example components usage */}
-        <div className="mt-12 space-y-8">
-          <section className="p-6 rounded-xl bg-card">
-            <h2 className="text-xl font-semibold mb-4">Math Example</h2>
-            <MathBlock math="\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}" />
-          </section>
+      <main className="container max-w-3xl py-12">
+        {/* Intro Section */}
+        <section className="mb-16">
+          <h1 className="text-4xl font-bold tracking-tight mb-4">
+            Hi, I'm Rohit Das
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            I write about software engineering, distributed systems, and technology.
+            Currently building scalable systems at Tech Corp.
+          </p>
+        </section>
 
-          <section className="p-6 rounded-xl bg-card">
-            <h2 className="text-xl font-semibold mb-4">YouTube Example</h2>
-            <YouTubeEmbed videoId="dQw4w9WgXcQ" />
-          </section>
+        {/* Blog List */}
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-8">Latest Posts</h2>
+          <div className="space-y-8">
+            {PLACEHOLDER_POSTS.map((post) => (
+              <BlogCard key={post.title} {...post} />
+            ))}
+          </div>
+        </section>
 
-          <section className="p-6 rounded-xl bg-card">
-            <h2 className="text-xl font-semibold mb-4">PDF Example</h2>
-            <PDFPreview 
-              url="https://example.com/sample.pdf"
-              title="Technical Whitepaper.pdf"
-            />
-          </section>
-        </div>
+        {/* Examples Section */}
+        <section className="mt-16 space-y-8 border-t border-border/50 pt-8">
+          <h2 className="text-2xl font-semibold tracking-tight mb-8">Examples</h2>
+          
+          <div className="space-y-8">
+            <div className="p-6 rounded-xl bg-card">
+              <h3 className="text-xl font-semibold mb-4">Math Example</h3>
+              <MathBlock math="\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}" />
+            </div>
+
+            <div className="p-6 rounded-xl bg-card">
+              <h3 className="text-xl font-semibold mb-4">YouTube Example</h3>
+              <YouTubeEmbed videoId="dQw4w9WgXcQ" />
+            </div>
+
+            <div className="p-6 rounded-xl bg-card">
+              <h3 className="text-xl font-semibold mb-4">PDF Example</h3>
+              <PDFPreview 
+                url="https://example.com/sample.pdf"
+                title="Technical Whitepaper.pdf"
+              />
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
