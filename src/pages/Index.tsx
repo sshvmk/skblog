@@ -1,9 +1,6 @@
 
 import { Header } from "@/components/header";
 import { BlogCard } from "@/components/blog-card";
-import { MathBlock } from "@/components/ui/math-block";
-import { YouTubeEmbed } from "@/components/ui/youtube-embed";
-import { PDFPreview } from "@/components/ui/pdf-preview";
 
 const PLACEHOLDER_POSTS = [
   {
@@ -49,31 +46,6 @@ const Index = () => {
             {PLACEHOLDER_POSTS.map((post) => (
               <BlogCard key={post.title} {...post} />
             ))}
-          </div>
-        </section>
-
-        {/* Examples Section */}
-        <section className="mt-16 space-y-8 border-t border-border/50 pt-8">
-          <h2 className="text-2xl font-semibold tracking-tight mb-8">Examples</h2>
-          
-          <div className="space-y-8">
-            <div className="p-6 rounded-xl bg-card">
-              <h3 className="text-xl font-semibold mb-4">Math Example</h3>
-              <MathBlock math="\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}" />
-            </div>
-
-            <div className="p-6 rounded-xl bg-card">
-              <h3 className="text-xl font-semibold mb-4">YouTube Example</h3>
-              <YouTubeEmbed videoId="dQw4w9WgXcQ" />
-            </div>
-
-            <div className="p-6 rounded-xl bg-card">
-              <h3 className="text-xl font-semibold mb-4">PDF Example</h3>
-              <PDFPreview 
-                url="https://example.com/sample.pdf"
-                title="Technical Whitepaper.pdf"
-              />
-            </div>
           </div>
         </section>
       </main>
