@@ -10,11 +10,10 @@ const About = () => {
         
         <div className="space-y-8">
           <section>
-            <div className="flex items-center gap-4 mb-4">
-              <img src='/cat.jpeg' width='200' className="rounded-lg"></img>
-              <p className="text-lg">
-                Hi, I'm Shivam Kushwaha, an engineer, tech optimist, wanderer and writer. My interests lies in <b>ML/AI, deeptech, financial markets, music, poetry and philosophy</b>
-                . I love nature a lot so I travel whenever I can. I look forward to seeing trees and rivers.
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
+              <img src='/cat.jpeg' width='200' className="rounded-lg flex-shrink-0"></img>
+              <p className="text-lg text-center md:text-left">
+                Hi, I'm Shivam Kushwaha, an engineer, tech optimist, wanderer and writer. My interests lies in <b>ML/AI, deeptech, financial markets, music, poetry and philosophy</b>. I love nature a lot so I travel whenever I can. I look forward to seeing trees and rivers.
                 <br/>Currently, my work includes data analysis and ML modelling for PL products. 
               </p>
             </div>

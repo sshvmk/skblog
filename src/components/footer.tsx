@@ -5,17 +5,17 @@ import { Button } from "./ui/button";
 const SOCIAL_LINKS = [
   {
     icon: Twitter,
-    href: "https://twitter.com/rohitdas",
+    href: "https://twitter.com/sshvmk",
     label: "Twitter"
   },
   {
     icon: Github,
-    href: "https://github.com/rohitdas",
+    href: "https://github.com/sshvmk",
     label: "GitHub"
   },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/in/rohitdas",
+    href: "https://www.linkedin.com/in/shivamkushwaha27/",
     label: "LinkedIn"
   }
 ];
