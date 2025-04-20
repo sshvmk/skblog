@@ -8,18 +8,21 @@ const PLACEHOLDER_POSTS = [
     excerpt: "Exploring functional programming concepts and category theory implementation in TypeScript...",
     date: "2024-04-20",
     readingTime: "5 min read",
+    slug: "understanding-category-theory"
   },
   {
     title: "Advanced React Patterns with Examples",
     excerpt: "Deep dive into advanced React patterns including compound components and control props...",
     date: "2024-04-19",
     readingTime: "8 min read",
+    slug: "advanced-react-patterns"
   },
   {
     title: "The Math Behind Neural Networks",
     excerpt: "Understanding the mathematical foundations of neural networks and deep learning...",
     date: "2024-04-18",
     readingTime: "10 min read",
+    slug: "neural-networks-math"
   },
 ];
 
