@@ -34,22 +34,22 @@ const Index = () => {
         {/* Intro Section */}
         <section className="mb-16">
           <h1 className="text-4xl font-bold tracking-tight mb-4">
-            Hi, I'm Shivam
+            hi, i'm shivam
           </h1>
           <p className="text-lg text-muted-foreground">
-            I write about AI/ML, math and everything in technology that piques my interest.
+            i write about AI/ML, math and everything in technology that piques my interest.
           </p>
           <p className="text-lg text-muted-foreground mt-4">
-          Find my thoughts on random things on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>Bear blog</a>
+          find my thoughts on random things on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
           </p>
           <p className="text-lg text-muted-foreground">
-          I also post my raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
+          i also post my raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
           </p>
         </section>
 
         {/* Blog List */}
         <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-5">Posts</h2>
+          <h2 className="text-2xl font-semibold tracking-tight mb-5">posts</h2>
           <div className="space-y-4">
             {PLACEHOLDER_POSTS.map((post) => (
               <BlogCard key={post.title} {...post} />
