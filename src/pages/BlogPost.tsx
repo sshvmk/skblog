@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { MathBlock } from "@/components/ui/math-block";
 import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 import { PDFPreview } from "@/components/ui/pdf-preview";
+import { Footer } from "@/components/footer";
 
 // Sample blog post data
 const BLOG_POSTS = {
@@ -136,6 +137,7 @@ const BlogPost = () => {
           </div>
         </article>
       </main>
+      <Footer/>
     </div>
   );
 };
