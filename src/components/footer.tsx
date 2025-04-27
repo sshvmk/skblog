@@ -47,15 +47,13 @@ const PAGE_LINKS = [
 export function Footer() {
   return (
     <footer className="
-      hidden md:flex items-center justify-center /* Added flex properties */
-      fixed bottom-4 left-1/2 -translate-x-1/2 z-40 
-      py-2 px-3 /* Reduced horizontal padding */
-      space-x-1 /* Reduced spacing between items */
-      border border-border/50 rounded-full
+      flex items-center justify-center /* Base flex properties */
+      fixed bottom-4 left-1/2 -translate-x-1/2 z-40 /* Centered, fixed bottom */
+      p-2 space-x-1 /* Consistent padding and spacing */
+      border border-border/50 rounded-full /* Consistent border and rounding */
       bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
-      max-w-fit
+      max-w-fit /* Consistent max-width */
     ">
-      {/* Removed inner container div, applied flex properties directly to footer */}
       {/* Page Links */}
       {PAGE_LINKS.map(({ icon: Icon, href, label }) => (
         <Button
@@ -71,7 +69,8 @@ export function Footer() {
         </Button>
       ))}
       
-      <div className="h-6 w-px bg-border/50"></div> {/* Removed mx */}
+      {/* Divider always visible */}
+      <div className="h-6 w-px bg-border/50"></div>
       
       {/* Social Links */}
       {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
