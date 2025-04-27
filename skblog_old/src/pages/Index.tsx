@@ -1,13 +1,15 @@
+import { Header } from "@/components/header";
 import { BlogCard } from "@/components/blog-card";
+import { Footer } from "@/components/footer";
 
 const PLACEHOLDER_POSTS = [
-  // {
-  //   title: "Understanding Category Theory in TypeScript",
-  //   excerpt: "Exploring functional programming concepts and category theory implementation in TypeScript...",
-  //   date: "2024-04-20",
-  //   readingTime: "5 min read",
-  //   slug: "understanding-category-theory"
-  // },
+  {
+    title: "Understanding Category Theory in TypeScript",
+    excerpt: "Exploring functional programming concepts and category theory implementation in TypeScript...",
+    date: "2024-04-20",
+    readingTime: "5 min read",
+    slug: "understanding-category-theory"
+  },
   // {
   //   title: "Advanced React Patterns with Examples",
   //   excerpt: "Deep dive into advanced React patterns including compound components and control props...",
@@ -26,8 +28,8 @@ const PLACEHOLDER_POSTS = [
 
 const Index = () => {
   return (
-    <>
-      {/* <Header /> // Removed */}
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <Header />
       <main className="container max-w-3xl py-10 flex-grow">
         {/* Intro Section */}
         <section className="mb-16">
@@ -55,8 +57,8 @@ const Index = () => {
           </div>
         </section>
       </main>
-      {/* <Footer /> // Removed */}
-    </>
+      <Footer />
+    </div>
   );
 };
 

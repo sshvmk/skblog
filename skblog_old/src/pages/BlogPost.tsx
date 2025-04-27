@@ -1,7 +1,10 @@
+
+import { Header } from "@/components/header";
 import { useParams } from "react-router-dom";
 import { MathBlock } from "@/components/ui/math-block";
 import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 import { PDFPreview } from "@/components/ui/pdf-preview";
+import { Footer } from "@/components/footer";
 
 // Sample blog post data
 const BLOG_POSTS = {
@@ -80,15 +83,19 @@ const BlogPost = () => {
   
   if (!post) {
     return (
-      <main className="container max-w-3xl py-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Post Not Found</h1>
-        <p>The blog post you're looking for does not exist.</p>
-      </main>
+      <div className="min-h-screen bg-background text-foreground">
+        <Header />
+        <main className="container max-w-3xl py-12">
+          <h1 className="text-4xl font-bold tracking-tight mb-4">Post Not Found</h1>
+          <p>The blog post you're looking for does not exist.</p>
+        </main>
+      </div>
     );
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
       <main className="container max-w-3xl py-12">
         <article>
           {/* Post Header */}
@@ -130,7 +137,8 @@ const BlogPost = () => {
           </div>
         </article>
       </main>
-    </>
+      <Footer/>
+    </div>
   );
 };
 

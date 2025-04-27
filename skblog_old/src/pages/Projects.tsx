@@ -1,6 +1,11 @@
+
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+
 const Projects = () => {
   return (
-    <>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
       <main className="container max-w-3xl py-12">
         <h1 className="text-4xl font-bold tracking-tight mb-8">Projects</h1>
         
@@ -40,7 +45,8 @@ const Projects = () => {
           </div> */}
         </div>
       </main>
-    </>
+      <Footer/>
+    </div>
   );
 };
 

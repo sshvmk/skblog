@@ -1,6 +1,10 @@
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+
 const About = () => {
   return (
-    <>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
       <main className="container max-w-3xl py-12">
         <h1 className="text-4xl font-bold tracking-tight mb-8">About Me</h1>
         
@@ -43,7 +47,8 @@ const About = () => {
           </section>
         </div>
       </main>
-    </>
+      <Footer/>
+    </div>
   );
 };
 
