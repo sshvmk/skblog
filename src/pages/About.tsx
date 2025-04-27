@@ -24,12 +24,12 @@ const About = () => {
               <div>
                 <h3 className="text-lg font-medium">Data and ML Engineer • Paytm</h3>
                 <p className="text-muted-foreground">2024 - Present</p>
-                <p>Analyzing data and working on TTS models at large scale.</p>
+                <p className="text-sm">Analyzing data and working on TTS models at large scale.</p>
               </div>
               <div>
                 <h3 className="text-lg font-medium">Machine Learning Intern • NSUT Central AI Lab</h3>
                 <p className="text-muted-foreground">2022 - 2024</p>
-                <p>Worked on CNN</p>
+                <p className="text-sm">Worked on CNN</p>
               </div>
             </div>
           </section>
