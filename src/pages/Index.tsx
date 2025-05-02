@@ -31,11 +31,13 @@ const Index = () => {
       <main className="container max-w-3xl py-8 flex-grow">
         {/* Intro Section */}
         <section className="mb-14">
-          <h1 className="text-5xl font-bold tracking-tight mb-4">
+          <h1 className="text-5xl font-extrabold tracking-tight mb-4">
+          
+           {/* <h1 className="text-5xl font-bold tracking-tight mb-4 text-white py-2 rounded-md inline-block [text-shadow:4px_4px_#A04000]"> */}
             hi, i'm shivam
           </h1>
           <p className="text-xl text-foreground">
-            i write about AI/ML, math and everything in technology that piques my interest.
+            i write about AI/ML, math & everything in technology that piques my interest.
           </p>
           <p className="text-base mt-4">
           random thoughts on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
