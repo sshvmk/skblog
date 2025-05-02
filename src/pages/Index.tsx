@@ -38,10 +38,10 @@ const Index = () => {
             i write about AI/ML, math and everything in technology that piques my interest.
           </p>
           <p className="text-base text-muted-foreground mt-4">
-          find my thoughts on random things on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
+          random thoughts on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
           </p>
           <p className="text-base text-muted-foreground">
-          i also post my raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
+          raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
           </p>
           <br></br>
           <p className="text-base text-muted-foreground">
