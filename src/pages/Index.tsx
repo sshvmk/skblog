@@ -28,30 +28,30 @@ const Index = () => {
   return (
     <>
       {/* <Header /> // Removed */}
-      <main className="container max-w-3xl py-10 flex-grow">
+      <main className="container max-w-3xl py-8 flex-grow">
         {/* Intro Section */}
-        <section className="mb-16">
+        <section className="mb-14">
           <h1 className="text-5xl font-bold tracking-tight mb-4">
             hi, i'm shivam
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-foreground">
             i write about AI/ML, math and everything in technology that piques my interest.
           </p>
-          <p className="text-base text-muted-foreground mt-4">
+          <p className="text-base mt-4">
           random thoughts on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
           </p>
-          <p className="text-base text-muted-foreground">
+          <p className="text-base">
           raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
           </p>
           <br></br>
-          <p className="text-base text-muted-foreground">
+          <p className="text-base">
           come say hi to me on <a className='font-bold text-white' href='https://x.com/sshvmk'>X</a>
           </p>
         </section>
 
         {/* Blog List */}
         <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-5">posts</h2>
+          <h2 className="text-2xl font-semibold tracking-tight mb-4">posts</h2>
           <h6 className="text-base mb-5"><i>In progress, will be adding soon.....</i></h6>
           <div className="space-y-4">
             {PLACEHOLDER_POSTS.map((post) => (
