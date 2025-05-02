@@ -2,10 +2,10 @@ const Projects = () => {
   return (
     <>
       <main className="container max-w-3xl py-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-8">Projects</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-8 text-teal-500">Projects</h1>
         
         <div className="grid gap-8">
-          <p className="text-center">WIP</p>
+          <p className="text-center text-xl">This page is W.I.P.</p>
           {/* Project 1 */}
           {/* <div className="p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors">
             <h2 className="text-xl font-semibold mb-2">Distributed Database System</h2>

@@ -2,10 +2,12 @@ import { Twitter, Github, Linkedin, Home, FolderKanban, User, Mail } from "lucid
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { TbBrandLeetcode } from "react-icons/tb";
 
 const SOCIAL_LINKS = [
   {
-    icon: Twitter,
+    icon: FaXTwitter,
     href: "https://twitter.com/sshvmk",
     label: "Twitter"
   },
@@ -18,6 +20,11 @@ const SOCIAL_LINKS = [
     icon: Linkedin,
     href: "https://www.linkedin.com/in/shivamkushwaha27/",
     label: "LinkedIn"
+  },
+  {
+    icon: TbBrandLeetcode,
+    href: "https://www.leetcode.com/sshvmk/",
+    label: "Leetcode"
   },
   {
     icon: Mail,

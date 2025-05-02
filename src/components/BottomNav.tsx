@@ -7,7 +7,11 @@ import {
   Mail,
   User,
   Twitter,
+  Link as LinkIcon
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { TbBrandLeetcode } from "react-icons/tb";
+
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
@@ -21,8 +25,9 @@ const navItems = [
   // { href: "/about", icon: User, label: "About" },
   { href: "https://github.com/shivamkushwaha", icon: Github, label: "GitHub", external: true },
   { href: "https://www.linkedin.com/in/shivamkushwaha11/", icon: Linkedin, label: "LinkedIn", external: true },
-  { href: "https://twitter.com/shivamkushwaha_", icon: Twitter, label: "Twitter", external: true },
+  { href: "https://twitter.com/shivamkushwaha_", icon: FaXTwitter, label: "Twitter", external: true },
   { href: "mailto:shivamkushwaha@proton.me", icon: Mail, label: "Email", external: true },
+  { href: "#", icon: TbBrandLeetcode, label: "TbBrandLeetcode", external: true },
 ];
 
 export function BottomNav() {

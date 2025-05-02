@@ -31,23 +31,28 @@ const Index = () => {
       <main className="container max-w-3xl py-10 flex-grow">
         {/* Intro Section */}
         <section className="mb-16">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">
+          <h1 className="text-5xl font-bold tracking-tight mb-4">
             hi, i'm shivam
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl text-muted-foreground">
             i write about AI/ML, math and everything in technology that piques my interest.
           </p>
-          <p className="text-lg text-muted-foreground mt-4">
+          <p className="text-base text-muted-foreground mt-4">
           find my thoughts on random things on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
           </p>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base text-muted-foreground">
           i also post my raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
+          </p>
+          <br></br>
+          <p className="text-base text-muted-foreground">
+          come say hi to me on <a className='font-bold text-white' href='https://x.com/sshvmk'>X</a>
           </p>
         </section>
 
         {/* Blog List */}
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-5">posts</h2>
+          <h6 className="text-base mb-5"><i>In progress, will be adding soon.....</i></h6>
           <div className="space-y-4">
             {PLACEHOLDER_POSTS.map((post) => (
               <BlogCard key={post.title} {...post} />
