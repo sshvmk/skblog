@@ -1,4 +1,5 @@
 import { BlogCard } from "@/components/blog-card";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PLACEHOLDER_POSTS = [
   // {
@@ -31,23 +32,24 @@ const Index = () => {
       <main className="container max-w-3xl py-8 flex-grow">
         {/* Intro Section */}
         <section className="mb-14">
-          <h1 className="text-5xl font-extrabold tracking-tight mb-4">
-          
-           {/* <h1 className="text-5xl font-bold tracking-tight mb-4 text-white py-2 rounded-md inline-block [text-shadow:4px_4px_#A04000]"> */}
-            hi, i'm shivam
-          </h1>
+          <div className="flex items-center gap-4 mb-4">
+            <h1 className="text-4xl font-bold tracking-tight">
+              hi, i'm shivam
+            </h1>
+            <ThemeToggle />
+          </div>
           <p className="text-xl text-foreground">
             i write about AI/ML, math & everything in technology that piques my interest.
           </p>
           <p className="text-base mt-4">
-          random thoughts on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
+            random thoughts on my <a className='font-bold text-white' href='https://sshvmk.bearblog.dev/'>bear blog</a>
           </p>
           <p className="text-base">
-          raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
+            raw notes on my <a className='font-bold text-white' href='https://sshvmk.github.io/notes/'>notes site</a>
           </p>
           <br></br>
           <p className="text-base">
-          come say hi to me on <a className='font-bold text-white' href='https://x.com/sshvmk'>X</a>
+            come say hi to me on <a className='font-bold text-white' href='https://x.com/sshvmk'>X</a>
           </p>
         </section>
 
