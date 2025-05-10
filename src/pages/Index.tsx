@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <>
       {/* <Header /> // Removed */}
-      <main className="container max-w-3xl py-8 flex-grow">
+      <main className="container max-w-3xl py-4 flex-grow">
         {/* Intro Section */}
         <section className="mb-14">
           <div className="flex items-center gap-4 mb-4">

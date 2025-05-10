@@ -1,8 +1,8 @@
 const Projects = () => {
   return (
     <>
-      <main className="container max-w-3xl py-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-8 text-teal-500">Projects</h1>
+      <main className="container max-w-3xl py-4">
+        <h1 className="text-4xl font-bold tracking-tight mb-8 text-cyan-500">Projects</h1>
         
         <div className="grid gap-8">
           <p className="text-center text-xl">This page is W.I.P.</p>
