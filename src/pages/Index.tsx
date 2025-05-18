@@ -53,16 +53,6 @@ const Index = () => {
 
         {/* Blog List */}
         <section className="mt-2">
-          {/* <div className="flex items-center gap-1 mb-8">
-            <a
-              href="https://sshvmk.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 px-3 py-3 text-sm font-bold text-white hover:from-pink-600 hover:via-orange-600 hover:to-yellow-600 transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
-            >
-              Subscribe to my monthly Substack
-            </a>
-          </div> */}
           <h2 className="text-3xl font-bold tracking-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">posts</h2>
           <h6 className="text-base mb-8 text-muted-foreground"><i>In progress, will be adding soon.....</i></h6>
           <div className="space-y-6">
