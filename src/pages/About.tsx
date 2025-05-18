@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <main className="container max-w-3xl py-12">
+      <main className="container max-w-3xl py-6">
         <h1 className="text-4xl font-bold tracking-tight mb-8 text-cyan-500">About Me</h1>
         
         <div className="space-y-8">

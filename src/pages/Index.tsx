@@ -29,27 +29,24 @@ const Index = () => {
   return (
     <>
       {/* <Header /> // Removed */}
-      <main className="container max-w-3xl py-12 flex-grow">
+      <main className="container max-w-3xl py-6 flex-grow">
         {/* Intro Section */}
-        <section className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+        <section className="mb-10">
+          <div className="flex items-center gap-3 mb-8">
+            <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               hi, i'm shivam
             </h1>
             <ThemeToggle />
           </div>
-          <p className="text-2xl text-foreground/90 leading-relaxed">
+          <p className="text-xl text-foreground/90 leading-relaxed">
             i write about AI/ML, math & everything in technology that piques my interest.
           </p>
-          <div className="mt-6 space-y-3">
-            <p className="text-base">
-              random thoughts on my <a className='font-bold text-white hover:text-orange-400 transition-colors' href='https://sshvmk.bearblog.dev/'>bear blog</a>
+          <div className="mt-4 space-y-3">
+            <p className="text-xl">
+              random thoughts on my <a className='font-bold text-foreground hover:text-orange-400 transition-colors' href='https://sshvmk.bearblog.dev/'>bear blog</a>
             </p>
-            <p className="text-base">
-              raw notes on my <a className='font-bold text-white hover:text-orange-400 transition-colors' href='https://sshvmk.github.io/notes/'>notes site</a>
-            </p>
-            <p className="text-base">
-              come say hi to me on <a className='font-bold text-white hover:text-orange-400 transition-colors' href='https://x.com/sshvmk'>X</a>
+            <p className="text-xl">
+              raw notes on my <a className='font-bold text-foreground hover:text-orange-400 transition-colors' href='https://sshvmk.github.io/notes/'>notes site</a>
             </p>
           </div>
         </section>
@@ -66,7 +63,7 @@ const Index = () => {
               Subscribe to my monthly Substack
             </a>
           </div> */}
-          <h2 className="text-3xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">posts</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">posts</h2>
           <h6 className="text-base mb-8 text-muted-foreground"><i>In progress, will be adding soon.....</i></h6>
           <div className="space-y-6">
             {PLACEHOLDER_POSTS.map((post) => (
