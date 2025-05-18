@@ -57,9 +57,12 @@ export function Footer() {
       flex items-center justify-center /* Base flex properties */
       fixed bottom-4 left-1/2 -translate-x-1/2 z-40 /* Centered, fixed bottom */
       p-2 space-x-1 /* Consistent padding and spacing */
-      border border-border/50 rounded-full /* Consistent border and rounding */
-      bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
+      border-2 border-orange-500/20 rounded-full /* Thicker subtle orange border */
+      bg-gradient-to-r from-background/95 via-background/90 to-background/95 /* Subtle gradient background */
+      backdrop-blur supports-[backdrop-filter]:bg-background/60
       max-w-fit /* Consistent max-width */
+      hover:border-orange-500/40 /* Slightly more visible border on hover */
+      transition-all duration-300 /* Smooth transition */
     ">
       {/* Page Links */}
       {PAGE_LINKS.map(({ icon: Icon, href, label }) => (
@@ -76,7 +79,7 @@ export function Footer() {
         </Button>
       ))}
       
-      {/* Divider always visible */}
+      {/* Divider */}
       <div className="h-6 w-px bg-border/50"></div>
       
       {/* Social Links */}

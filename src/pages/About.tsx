@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <>
-      <main className="container max-w-3xl py-4">
-        <h1 className="text-4xl font-bold tracking-tight mb-6 text-cyan-500">About Me</h1>
+      <main className="container max-w-3xl py-12">
+        <h1 className="text-4xl font-bold tracking-tight mb-8 text-cyan-500">About Me</h1>
         
         <div className="space-y-8">
           <section>
@@ -14,7 +14,7 @@ const About = () => {
                 <br/>Currently, my work includes data analysis and ML modelling for PL products. 
               </p>
             </div>
-            <p className="text-lg mb-3">
+            <p className="text-lg mb-4">
               
             </p>
           </section>
