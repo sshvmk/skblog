@@ -31,7 +31,7 @@ const Index = () => {
   return (
     <>
       {/* <Header /> // Removed */}
-      <main className="container max-w-[98%] sm:max-w-2xl py-0 flex-grow">
+      <main className="container max-w-[99.5%] sm:max-w-2xl py-0 flex-grow">
         {/* Intro Section */}
         <section className="mb-10">
           <div className="flex items-center gap-4 mb-6">
@@ -97,6 +97,7 @@ const Index = () => {
                   <p className="text-sm sm:text-base text-foreground/90 line-clamp-2 sm:line-clamp-none">
                     i write about AI/ML, math & everything in technology that piques my interest.
                   </p>
+                  <br></br>
                   <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-sm sm:text-base mt-1 sm:mt-2">
                     <span className="font-semibold text-foreground">Quick Links:</span>
                     <a 
