@@ -45,10 +45,10 @@ const Index = () => {
           </p> */}
           
           {/* Details Section */}
-          <div className="mt-8 p-6 border-2 border-orange-500/20 rounded-lg bg-background/50 backdrop-blur-sm">
-            <div className="flex items-start gap-6">
+          <div className="mt-8 p-4 sm:p-6 border-2 border-orange-500/20 rounded-lg bg-background/50 backdrop-blur-sm">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
               {/* Profile Picture */}
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-orange-500/20">
+              <div className="w-32 h-32 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-orange-500/20">
                 <img 
                   src="/profile.JPG" 
                   alt="Shivam Kushwaha" 
@@ -57,21 +57,21 @@ const Index = () => {
               </div>
               
               {/* Profile Info */}
-              <div className="flex-1">
+              <div className="flex-1 text-center sm:text-left">
                 <div className="space-y-1">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold text-foreground">Shivam Kushwaha</h2>
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between gap-4">
+                    <h2 className="text-2xl sm:text-xl font-bold text-foreground">Shivam Kushwaha</h2>
                     <ThemeToggle />
                   </div>
-                  <p className="text-base text-foreground mt-4 mb-16">Data Scientist</p>
-                  <div className="flex items-center gap-2 mb-12">
+                  <p className="text-lg sm:text-base text-foreground mt-2 sm:mt-4 mb-8 sm:mb-16">Data Scientist</p>
+                  <div className="flex items-center justify-center sm:justify-start gap-2 mb-8 sm:mb-12">
                     <a 
                       href="https://x.com/sshvmk" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-foreground hover:text-orange-400 transition-colors p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                     >
-                      <FaXTwitter className="w-3.5 h-3.5" />
+                      <FaXTwitter className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
                     </a>
                     <a 
                       href="https://github.com/sshvmk" 
@@ -79,7 +79,7 @@ const Index = () => {
                       rel="noopener noreferrer"
                       className="text-foreground hover:text-orange-400 transition-colors p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                     >
-                      <FaGithub className="w-3.5 h-3.5" />
+                      <FaGithub className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
                     </a>
                     <a 
                       href="https://instagram.com/sshvmk" 
@@ -87,30 +87,32 @@ const Index = () => {
                       rel="noopener noreferrer"
                       className="text-foreground hover:text-orange-400 transition-colors p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                     >
-                      <FaInstagram className="w-3.5 h-3.5" />
+                      <FaInstagram className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
                     </a>
                   </div>
                 </div>
                 
                 <div className="mt-6">
-                  <p className="text-base text-foreground/90 mb-4">i write about AI/ML, math & everything in technology that piques my interest.</p>
-                  <div className="flex items-center gap-2 text-base">
+                  <p className="text-lg sm:text-base text-foreground/90 mb-4">i write about AI/ML, math & everything in technology that piques my interest.</p>
+                  <div className="flex flex-col sm:flex-row items-center gap-2 text-base">
                     <span className="font-semibold text-foreground">Quick Links:</span>
-                    <a 
-                      href="https://sshvmk.bearblog.dev/" 
-                      className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
-                    >
-                      Bear Blog
-                      <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-1">→</span>
-                    </a>
-                    <span className="text-foreground/60">|</span>
-                    <a 
-                      href="https://sshvmk.github.io/notes/" 
-                      className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
-                    >
-                      Notes Site
-                      <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-1">→</span>
-                    </a>
+                    <div className="flex flex-col sm:flex-row items-center gap-2">
+                      <a 
+                        href="https://sshvmk.bearblog.dev/" 
+                        className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
+                      >
+                        Bear Blog
+                        <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-1">→</span>
+                      </a>
+                      <span className="hidden sm:inline text-foreground/60">|</span>
+                      <a 
+                        href="https://sshvmk.github.io/notes/" 
+                        className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
+                      >
+                        Notes Site
+                        <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-1">→</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
