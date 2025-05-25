@@ -45,10 +45,10 @@ const Index = () => {
           </p> */}
           
           {/* Details Section */}
-          <div className="mt-8 p-4 sm:p-6 border-2 border-orange-500/20 rounded-lg bg-background/50 backdrop-blur-sm">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <div className="mt-8 p-3 sm:p-6 border-2 border-orange-500/20 rounded-lg bg-background/50 backdrop-blur-sm">
+            <div className="flex items-center gap-2 sm:gap-6">
               {/* Profile Picture */}
-              <div className="w-32 h-32 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-orange-500/20">
+              <div className="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 rounded-full overflow-hidden border-2 border-orange-500/20">
                 <img 
                   src="/profile.JPG" 
                   alt="Shivam Kushwaha" 
@@ -57,62 +57,63 @@ const Index = () => {
               </div>
               
               {/* Profile Info */}
-              <div className="flex-1 text-center sm:text-left">
-                <div className="space-y-1">
-                  <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between gap-4">
-                    <h2 className="text-2xl sm:text-xl font-bold text-foreground">Shivam Kushwaha</h2>
-                    <ThemeToggle />
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-base sm:text-xl font-bold text-foreground truncate">Shivam Kushwaha</h2>
+                    <p className="text-xs sm:text-base text-foreground">Data Scientist</p>
                   </div>
-                  <p className="text-lg sm:text-base text-foreground mt-2 sm:mt-4 mb-8 sm:mb-16">Data Scientist</p>
-                  <div className="flex items-center justify-center sm:justify-start gap-2 mb-8 sm:mb-12">
-                    <a 
-                      href="https://x.com/sshvmk" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-foreground hover:text-orange-400 transition-colors p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
-                    >
-                      <FaXTwitter className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-                    </a>
-                    <a 
-                      href="https://github.com/sshvmk" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-foreground hover:text-orange-400 transition-colors p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
-                    >
-                      <FaGithub className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-                    </a>
-                    <a 
-                      href="https://instagram.com/sshvmk" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-foreground hover:text-orange-400 transition-colors p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
-                    >
-                      <FaInstagram className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-                    </a>
-                  </div>
+                  <ThemeToggle />
                 </div>
                 
-                <div className="mt-6">
-                  <p className="text-lg sm:text-base text-foreground/90 mb-4">i write about AI/ML, math & everything in technology that piques my interest.</p>
-                  <div className="flex flex-col sm:flex-row items-center gap-2 text-base">
+                <div className="flex items-center gap-1.5 sm:gap-2 mt-2 sm:mt-4">
+                  <a 
+                    href="https://x.com/sshvmk" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
+                  >
+                    <FaXTwitter className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                  </a>
+                  <a 
+                    href="https://github.com/sshvmk" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
+                  >
+                    <FaGithub className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                  </a>
+                  <a 
+                    href="https://instagram.com/sshvmk" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
+                  >
+                    <FaInstagram className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                  </a>
+                </div>
+                
+                <div className="mt-2 sm:mt-4">
+                  <p className="text-xs sm:text-base text-foreground/90 line-clamp-2 sm:line-clamp-none">
+                    i write about AI/ML, math & everything in technology that piques my interest.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-xs sm:text-base mt-1 sm:mt-2">
                     <span className="font-semibold text-foreground">Quick Links:</span>
-                    <div className="flex flex-col sm:flex-row items-center gap-2">
-                      <a 
-                        href="https://sshvmk.bearblog.dev/" 
-                        className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
-                      >
-                        Bear Blog
-                        <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-1">→</span>
-                      </a>
-                      <span className="hidden sm:inline text-foreground/60">|</span>
-                      <a 
-                        href="https://sshvmk.github.io/notes/" 
-                        className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
-                      >
-                        Notes Site
-                        <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-1">→</span>
-                      </a>
-                    </div>
+                    <a 
+                      href="https://sshvmk.bearblog.dev/" 
+                      className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
+                    >
+                      Bear Blog
+                      <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
+                    </a>
+                    <span className="text-foreground/60">|</span>
+                    <a 
+                      href="https://sshvmk.github.io/notes/" 
+                      className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
+                    >
+                      Notes Site
+                      <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
+                    </a>
                   </div>
                 </div>
               </div>
