@@ -31,9 +31,9 @@ const Index = () => {
   return (
     <>
       {/* <Header /> // Removed */}
-      <main className="container max-w-3xl py-2 flex-grow">
+      <main className="container max-w-2xl py-0 flex-grow">
         {/* Intro Section */}
-        <section className="mb-12">
+        <section className="mb-10">
           <div className="flex items-center gap-4 mb-6">
             {/* <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               hi, i'm shivam
@@ -60,8 +60,8 @@ const Index = () => {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-base sm:text-xl font-bold text-foreground truncate">Shivam Kushwaha</h2>
-                    <p className="text-xs sm:text-base text-foreground">Data Scientist</p>
+                    <h2 className="text-lg sm:text-xl font-bold text-foreground truncate">Shivam Kushwaha</h2>
+                    <p className="text-sm sm:text-base text-foreground">Data Scientist</p>
                   </div>
                   <ThemeToggle />
                 </div>
@@ -73,7 +73,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
-                    <FaXTwitter className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                    <FaXTwitter className="w-3.5 h-3.5" />
                   </a>
                   <a 
                     href="https://github.com/sshvmk" 
@@ -81,7 +81,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
-                    <FaGithub className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                    <FaGithub className="w-3.5 h-3.5" />
                   </a>
                   <a 
                     href="https://instagram.com/sshvmk" 
@@ -89,15 +89,15 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
-                    <FaInstagram className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                    <FaInstagram className="w-3.5 h-3.5" />
                   </a>
                 </div>
                 
                 <div className="mt-2 sm:mt-4">
-                  <p className="text-xs sm:text-base text-foreground/90 line-clamp-2 sm:line-clamp-none">
+                  <p className="text-sm sm:text-base text-foreground/90 line-clamp-2 sm:line-clamp-none">
                     i write about AI/ML, math & everything in technology that piques my interest.
                   </p>
-                  <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-xs sm:text-base mt-1 sm:mt-2">
+                  <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-sm sm:text-base mt-1 sm:mt-2">
                     <span className="font-semibold text-foreground">Quick Links:</span>
                     <a 
                       href="https://sshvmk.bearblog.dev/" 
@@ -134,7 +134,7 @@ const Index = () => {
               Subscribe to my monthly Substack
             </a>
           </div> */}
-          <h2 className="text-3xl font-bold tracking-tight mb-6 text-foreground">posts</h2>
+          <h3 className="text-3xl font-bold tracking-tight mb-6 text-foreground">posts</h3>
           <h6 className="text-base mb-8 text-muted-foreground"><i>In progress, will be adding soon.....</i></h6>
           <div className="space-y-6">
             {PLACEHOLDER_POSTS.map((post) => (
