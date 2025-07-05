@@ -27,11 +27,11 @@ const SOCIAL_LINKS = [
     href: "https://www.leetcode.com/sshvmk/",
     label: "Leetcode"
   },
-  {
-    icon: SiSubstack,
-    href: "https://sshvmk.substack.com",
-    label: "Substack"
-  },
+  // {
+  //   icon: SiSubstack,
+  //   href: "https://sshvmk.substack.com",
+  //   label: "Substack"
+  // },
   {
     icon: Mail,
     href: "mailto:shivamkush.2000@gmail.com",
