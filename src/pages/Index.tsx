@@ -101,7 +101,7 @@ const Index = () => {
                   <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-sm sm:text-base mt-1 sm:mt-2">
                     <span className="font-semibold text-foreground">Quick Links:</span>
                     <a 
-                      href="https://sshvmk.bearblog.dev/" 
+                      href="https://shivamk.bearblog.dev/" 
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Bear Blog
