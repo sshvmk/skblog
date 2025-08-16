@@ -99,7 +99,7 @@ const Index = () => {
                   </p>
                   <br></br>
                   <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-1 text-sm sm:text-base mt-1 sm:mt-2">
-                    <span className="font-semibold text-foreground">Quick Links:</span>
+                    <span className="font-semibold text-foreground"><i>Connect with me here:</i></span>
                     <a 
                       href="https://substack.com/@sshvmk" 
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
@@ -113,6 +113,22 @@ const Index = () => {
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Notes Site
+                      <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
+                    </a>
+                    <span className="text-foreground/60">|</span>
+                    <a 
+                      href="https://www.goodreads.com/user/show/193017075" 
+                      className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
+                    >
+                      Goodreads
+                      <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
+                    </a>
+                    <span className="text-foreground/60">|</span>
+                    <a 
+                      href="https://boxd.it/g7Mlb" 
+                      className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
+                    >
+                      Letterboxd
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a>
                   </div>
