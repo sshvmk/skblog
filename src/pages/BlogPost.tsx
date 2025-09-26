@@ -80,7 +80,7 @@ const BlogPost = () => {
   
   if (!post) {
     return (
-      <main className="container max-w-3xl py-12">
+      <main className="container max-w-xl py-12">
         <h1 className="text-4xl font-bold tracking-tight mb-4">Post Not Found</h1>
         <p>The blog post you're looking for does not exist.</p>
       </main>
@@ -89,7 +89,7 @@ const BlogPost = () => {
 
   return (
     <>
-      <main className="container max-w-3xl py-12">
+      <main className="container max-w-xl py-12">
         <article>
           {/* Post Header */}
           <header className="mb-8">
