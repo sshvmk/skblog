@@ -91,7 +91,7 @@ const Index = () => {
                   </p>
                   <br></br>
 
-                  <div className="flex flex-nowrap items-center gap-x-1.5 sm:gap-x-2 text-sm sm:text-base mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
+                  <div className="flex flex-nowrap items-center gap-x-1.5 sm:gap-x-2 text-xs sm:text-sm mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
                     {/* <span className="font-semibold text-foreground"><i></i></span> */}
                     <span className="text-orange-400 dark:text-orange-400 font-medium">dm's open !</span>
                     <a 
@@ -120,7 +120,7 @@ const Index = () => {
                   </div>
 
 
-                  <div className="flex flex-nowrap items-center gap-x-1 sm:gap-x-1 text-sm sm:text-base mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
+                  <div className="flex flex-nowrap items-center gap-x-1 sm:gap-x-1 text-xs sm:text-sm mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
                     {/* <span className="font-semibold text-foreground"><i></i></span> */}
                     <a 
                       href="https://substack.com/@sshvmk" 
@@ -134,7 +134,7 @@ const Index = () => {
                       href="https://sshvmk.github.io/notes/" 
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
-                      Notes Site
+                      Notes
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a>
                     <span className="text-foreground/60">|</span>
