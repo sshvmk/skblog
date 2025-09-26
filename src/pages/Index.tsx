@@ -1,5 +1,6 @@
 import { BlogCard } from "@/components/blog-card";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -161,25 +162,53 @@ const Index = () => {
           
         </section>
 
-        {/* Blog List */}
-        <section className="mt-2">
-          {/* <div className="flex items-center gap-1 mb-8">
-            <a
-              href="https://sshvmk.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 px-3 py-3 text-sm font-bold text-white hover:from-pink-600 hover:via-orange-600 hover:to-yellow-600 transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
-            >
-              Subscribe to my monthly Substack
-            </a>
-          </div> */}
-          <h3 className="text-3xl font-bold tracking-tight mb-6 text-foreground">posts</h3>
-          <h6 className="text-base mb-8 text-muted-foreground"><i>In progress, will be adding soon.....</i></h6>
-          <div className="space-y-6">
-            {PLACEHOLDER_POSTS.map((post) => (
-              <BlogCard key={post.title} {...post} />
-            ))}
-          </div>
+        {/* Foldable Sections */}
+        <section className="mt-4">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="experience">
+              <AccordionTrigger className="text-base sm:text-lg">Experience</AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-lg font-medium">Data and ML Engineer • Paytm</h3>
+                    <p className="text-muted-foreground">Feb 2024 - Present</p>
+                    <p className="text-sm">Currently, I am building credit risk model, underwriting model and recommendation engines. </p>
+                    <p className="text-sm">Previously, I have worked on NLP pipeline solutioning for voice bots.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium">Data Scientist • Anahit Pvt Ltd (Fintech startup)</h3>
+                    <p className="text-muted-foreground">July 2023 - Dec 2023</p>
+                    <p className="text-sm">Major work was to study and build macro indicators such as recession indicator, global liquidity indicator, etc for financial markets. Also worked on finding correlation and catching trends across all major asset classes.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium">Machine Learning Intern • NSUT Central AI Lab</h3>
+                    <p className="text-muted-foreground">2022 - 2024</p>
+                    <p className="text-sm">Majorly worked on CNN and RNN models.</p>
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="projects">
+              <AccordionTrigger className="text-base sm:text-lg">Projects</AccordionTrigger>
+              <AccordionContent>
+                <div className="grid gap-3">
+                  <p className="text-sm text-muted-foreground">This section is W.I.P.</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="posts">
+              <AccordionTrigger className="text-base sm:text-lg">Posts</AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-6">
+                  {PLACEHOLDER_POSTS.map((post) => (
+                    <BlogCard key={post.title} {...post} />
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
       </main>
       {/* <Footer /> // Removed */}

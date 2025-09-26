@@ -45,16 +45,16 @@ const PAGE_LINKS = [
     href: "/",
     label: "Home"
   },
-  {
-    icon: FolderKanban,
-    href: "/projects",
-    label: "Projects"
-  },
-  {
-    icon: User,
-    href: "/about",
-    label: "About"
-  }
+  // {
+  //   icon: FolderKanban,
+  //   href: "/projects",
+  //   label: "Projects"
+  // },
+  // {
+  //   icon: User,
+  //   href: "/about",
+  //   label: "About"
+  // }
 ];
 
 export function Footer() {
