@@ -170,10 +170,14 @@ const Index = () => {
               <AccordionContent>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-medium">Data and ML Engineer • Paytm</h3>
+                    <h3 className="text-lg font-medium">Data Scientist • Paytm</h3>
                     <p className="text-muted-foreground">Feb 2024 - Present</p>
-                    <p className="text-sm">Currently, I am building credit risk model, underwriting model and recommendation engines. </p>
-                    <p className="text-sm">Previously, I have worked on NLP pipeline solutioning for voice bots.</p>
+                    <p className="text-sm"> - Built and integrated 10+ lender-specific models into a unified real-time Recommendation Engine framework for Personal Loans product.</p>
+                    <p className="text-sm"> - Achieved a 30% reduction in lead count while maintaining lead-to-loan ratios and doubled the conversion rate for 5+ lender journey.</p>
+                    <p className="text-sm"> - Led end-to-end development of a Look-alike Identification Model, delivering a 72% capture rate in the top 3 deciles.</p>
+                    <p className="text-sm"> - Designed a cohort identification model to isolate high-value customer groups with a 4x funnel rate, enabling targeted marketing campaigns.</p>
+                    <p className="text-sm"> - Developed an NLP-based pipeline to parse SMS data and extract features for downstream model training.</p>
+                    <p className="text-sm"> - Previously, I worked on NLP pipeline solutioning for voice bots.</p>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium">Data Scientist • Anahit Pvt Ltd (Fintech startup)</h3>
@@ -205,6 +209,7 @@ const Index = () => {
                   {PLACEHOLDER_POSTS.map((post) => (
                     <BlogCard key={post.title} {...post} />
                   ))}
+                  <p className="text-sm text-muted-foreground">This section is W.I.P.</p>
                 </div>
               </AccordionContent>
             </AccordionItem>
