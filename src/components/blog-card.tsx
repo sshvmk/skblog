@@ -17,14 +17,14 @@ export function BlogCard({ title, excerpt, date, readingTime, slug }: BlogCardPr
     <Link to={`/blog/${postSlug}`} className="block">
       <article className="group hover:bg-card/50 p-4 -mx-4 rounded-lg transition-colors">
         <div className="space-y-2">
+          <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
+            {title}
+          </h2>
           <div className="text-sm text-muted-foreground flex items-center space-x-2">
             <time dateTime={date}>{date}</time>
             <span>•</span>
             <span>{readingTime}</span>
           </div>
-          <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
-            {title}
-          </h2>
           <p className="text-muted-foreground">{excerpt}</p>
         </div>
       </article>

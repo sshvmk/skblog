@@ -1,10 +1,17 @@
 import { BlogCard } from "@/components/blog-card";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
+import { useState } from "react";
 
 const PLACEHOLDER_POSTS = [
+  {
+    title: "Dummy",
+    excerpt: "This is a dummy blog post to test the blog functionality. It contains various types of content to demonstrate the different features available.",
+    date: "2024-12-19",
+    readingTime: "3 min read",
+    slug: "dummy"
+  },
   // {
   //   title: "Understanding Category Theory in TypeScript",
   //   excerpt: "Exploring functional programming concepts and category theory implementation in TypeScript...",
@@ -29,6 +36,8 @@ const PLACEHOLDER_POSTS = [
 ];
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState("posts");
+
   return (
     <>
       {/* <Header /> // Removed */}
@@ -162,58 +171,94 @@ const Index = () => {
           
         </section>
 
-        {/* Foldable Sections */}
+        {/* Horizontal Tab Navigation */}
         <section className="mt-4">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="experience">
-              <AccordionTrigger className="text-base sm:text-lg">Experience</AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-medium">Data Scientist • Paytm</h3>
-                    <p className="text-muted-foreground">Feb 2024 - Present</p>
-                    <p className="text-sm"> - Built and integrated 10+ lender-specific models into a unified real-time Recommendation Engine framework for Personal Loans product.</p>
-                    <p className="text-sm"> - Achieved a 30% reduction in lead count while maintaining lead-to-loan ratios and doubled the conversion rate for 5+ lender journey.</p>
-                    <p className="text-sm"> - Led end-to-end development of a Look-alike Identification Model, delivering a 72% capture rate in the top 3 deciles.</p>
-                    <p className="text-sm"> - Designed a cohort identification model to isolate high-value customer groups with a 4x funnel rate, enabling targeted marketing campaigns.</p>
-                    <p className="text-sm"> - Developed an NLP-based pipeline to parse SMS data and extract features for downstream model training.</p>
-                    <p className="text-sm"> - Previously, I worked on NLP pipeline solutioning for voice bots.</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium">Data Scientist • Anahit Pvt Ltd (Fintech startup)</h3>
-                    <p className="text-muted-foreground">July 2023 - Dec 2023</p>
-                    <p className="text-sm">Major work was to study and build macro indicators such as recession indicator, global liquidity indicator, etc for financial markets. Also worked on finding correlation and catching trends across all major asset classes.</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium">Machine Learning Intern • NSUT Central AI Lab</h3>
-                    <p className="text-muted-foreground">2022 - 2024</p>
-                    <p className="text-sm">Majorly worked on CNN and RNN models.</p>
-                  </div>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
+          {/* Tab Bar */}
+          <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4 relative overflow-hidden">
+            {/* Animated background indicator */}
+            <div 
+              className={`absolute top-1 bottom-1 bg-orange-500 rounded-md shadow-lg transition-all duration-300 ease-out ${
+                activeTab === "experience" 
+                  ? "left-1 w-[calc(33.333%-0.25rem)]" 
+                  : activeTab === "projects" 
+                  ? "left-[calc(33.333%+0.25rem)] w-[calc(33.333%-0.25rem)]" 
+                  : "left-[calc(66.666%+0.25rem)] w-[calc(33.333%-0.25rem)]"
+              }`}
+            />
+            
+            <button
+              onClick={() => setActiveTab("experience")}
+              className={`relative z-10 flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+                activeTab === "experience"
+                  ? "text-white"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => setActiveTab("projects")}
+              className={`relative z-10 flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+                activeTab === "projects"
+                  ? "text-white"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => setActiveTab("posts")}
+              className={`relative z-10 flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+                activeTab === "posts"
+                  ? "text-white"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Posts
+            </button>
+          </div>
 
-            <AccordionItem value="projects">
-              <AccordionTrigger className="text-base sm:text-lg">Projects</AccordionTrigger>
-              <AccordionContent>
-                <div className="grid gap-3">
-                  <p className="text-sm text-muted-foreground">This section is W.I.P.</p>
+          {/* Tab Content */}
+          <div className="min-h-[200px]">
+            {activeTab === "experience" && (
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-medium">Data Scientist • Paytm</h3>
+                  <p className="text-muted-foreground">Feb 2024 - Present</p>
+                  <p className="text-sm"> - Built and integrated 10+ lender-specific models into a unified real-time Recommendation Engine framework for Personal Loans product.</p>
+                  <p className="text-sm"> - Achieved a 30% reduction in lead count while maintaining lead-to-loan ratios and doubled the conversion rate for 5+ lender journey.</p>
+                  <p className="text-sm"> - Led end-to-end development of a Look-alike Identification Model, delivering a 72% capture rate in the top 3 deciles.</p>
+                  <p className="text-sm"> - Designed a cohort identification model to isolate high-value customer groups with a 4x funnel rate, enabling targeted marketing campaigns.</p>
+                  <p className="text-sm"> - Developed an NLP-based pipeline to parse SMS data and extract features for downstream model training.</p>
+                  <p className="text-sm"> - Previously, I worked on NLP pipeline solutioning for voice bots.</p>
                 </div>
-              </AccordionContent>
-            </AccordionItem>
+                <div>
+                  <h3 className="text-lg font-medium">Data Scientist • Anahit Pvt Ltd (Fintech startup)</h3>
+                  <p className="text-muted-foreground">July 2023 - Dec 2023</p>
+                  <p className="text-sm">Major work was to study and build macro indicators such as recession indicator, global liquidity indicator, etc for financial markets. Also worked on finding correlation and catching trends across all major asset classes.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium">Machine Learning Intern • NSUT Central AI Lab</h3>
+                  <p className="text-muted-foreground">2022 - 2024</p>
+                  <p className="text-sm">Majorly worked on CNN and RNN models.</p>
+                </div>
+              </div>
+            )}
 
-            <AccordionItem value="posts">
-              <AccordionTrigger className="text-base sm:text-lg">Posts</AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-6">
-                  {PLACEHOLDER_POSTS.map((post) => (
-                    <BlogCard key={post.title} {...post} />
-                  ))}
-                  <p className="text-sm text-muted-foreground">This section is W.I.P.</p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            {activeTab === "projects" && (
+              <div className="grid gap-3">
+                <p className="text-sm text-muted-foreground">This section is W.I.P.</p>
+              </div>
+            )}
+
+            {activeTab === "posts" && (
+              <div className="space-y-6">
+                {PLACEHOLDER_POSTS.map((post) => (
+                  <BlogCard key={post.title} {...post} />
+                ))}
+              </div>
+            )}
+          </div>
         </section>
       </main>
       {/* <Footer /> // Removed */}

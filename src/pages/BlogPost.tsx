@@ -1,10 +1,29 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { MathBlock } from "@/components/ui/math-block";
 import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 import { PDFPreview } from "@/components/ui/pdf-preview";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 // Sample blog post data
 const BLOG_POSTS = {
+  "dummy": {
+    title: "Dummy",
+    date: "2024-12-19",
+    readingTime: "3 min read",
+    content: [
+      { type: "text", content: "This is a dummy blog post to test the blog functionality. It contains various types of content to demonstrate the different features available." },
+      { type: "text", content: "Here's some mathematical content:" },
+      { type: "math", content: "E = mc^2" },
+      { type: "text", content: "And here's some code:" },
+      { type: "code", content: `function hello() {
+  console.log("Hello, World!");
+  return "success";
+}` },
+      { type: "text", content: "This post demonstrates the blog system is working correctly. You can click on posts from the main page to view them in full screen." },
+      { type: "text", content: "The blog supports various content types including text, math equations, code blocks, YouTube videos, and PDF previews." }
+    ]
+  },
   "understanding-category-theory": {
     title: "Understanding Category Theory in TypeScript",
     date: "2024-04-20",
@@ -76,6 +95,7 @@ Tabs.Panel = ({ children, id }) => {
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const post = slug ? BLOG_POSTS[slug] : null;
   
   if (!post) {
@@ -91,28 +111,39 @@ const BlogPost = () => {
     <>
       <main className="container max-w-xl py-12">
         <article>
+          {/* Back Navigation */}
+          <div className="mb-4">
+            <button 
+              onClick={() => navigate(-1)}
+              className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20 flex items-center gap-2"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Back
+            </button>
+          </div>
+
           {/* Post Header */}
           <header className="mb-8">
-            <h1 className="text-4xl font-bold tracking-tight mb-4">{post.title}</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-4 text-white">{post.title}</h1>
             <div className="text-sm text-muted-foreground flex items-center space-x-2">
-              <time dateTime={post.date}>{post.date}</time>
-              <span>•</span>
-              <span>{post.readingTime}</span>
+              <time dateTime={post.date} className="text-orange-600 dark:text-orange-300">{post.date}</time>
+              <span className="text-orange-500">•</span>
+              <span className="text-orange-600 dark:text-orange-300">{post.readingTime}</span>
             </div>
           </header>
 
           {/* Post Content */}
-          <div className="prose prose-invert max-w-none">
+          <div className="prose prose-invert max-w-none text-base">
             {post.content.map((block, index) => {
               switch (block.type) {
                 case 'text':
-                  return <p key={index} className="mb-4">{block.content}</p>;
+                  return <p key={index} className="mb-4 text-base leading-relaxed">{block.content}</p>;
                 case 'math':
                   return <div key={index} className="my-6"><MathBlock math={block.content} /></div>;
                 case 'code':
                   return (
-                    <pre key={index} className="bg-card p-4 rounded-md my-6 overflow-x-auto">
-                      <code>{block.content}</code>
+                    <pre key={index} className="bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-800 p-4 rounded-md my-6 overflow-x-auto text-base">
+                      <code className="text-base text-orange-800 dark:text-orange-200">{block.content}</code>
                     </pre>
                   );
                 case 'youtube':
