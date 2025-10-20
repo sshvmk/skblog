@@ -95,7 +95,7 @@ const Index = () => {
                 </div>
                 
                 <div className="mt-2 sm:mt-4">
-                  <p className="text-sm sm:text-base text-foreground/90 line-clamp-2 sm:line-clamp-none">
+                  <p className="text-sm sm:text-base text-foreground/90 line-clamp-5 sm:line-clamp-none">
                     building ML models for a living. interests - ai, math, poetry, philosophy, architecture, nature and more
                     <br></br>
                   </p>
