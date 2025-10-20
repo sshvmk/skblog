@@ -174,47 +174,36 @@ const Index = () => {
         {/* Horizontal Tab Navigation */}
         <section className="mt-4">
           {/* Tab Bar */}
-          <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4 relative overflow-hidden">
-            {/* Animated background indicator */}
-            <div 
-              className={`absolute top-1 bottom-1 bg-orange-500 rounded-md shadow-lg transition-all duration-300 ease-out ${
-                activeTab === "experience" 
-                  ? "left-1 w-[calc(33.333%-0.25rem)]" 
-                  : activeTab === "projects" 
-                  ? "left-[calc(33.333%+0.25rem)] w-[calc(33.333%-0.25rem)]" 
-                  : "left-[calc(66.666%+0.25rem)] w-[calc(33.333%-0.25rem)]"
-              }`}
-            />
-            
+          <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4">
             <button
               onClick={() => setActiveTab("experience")}
-              className={`relative z-10 flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
                 activeTab === "experience"
-                  ? "text-white"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "text-orange-500"
+                  : "text-muted-foreground hover:text-white"
               }`}
             >
               Experience
             </button>
             <button
-              onClick={() => setActiveTab("projects")}
-              className={`relative z-10 flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
-                activeTab === "projects"
-                  ? "text-white"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Projects
-            </button>
-            <button
               onClick={() => setActiveTab("posts")}
-              className={`relative z-10 flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
                 activeTab === "posts"
-                  ? "text-white"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "text-orange-500"
+                  : "text-muted-foreground hover:text-white"
               }`}
             >
               Posts
+            </button>
+            <button
+              onClick={() => setActiveTab("projects")}
+              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+                activeTab === "projects"
+                  ? "text-orange-500"
+                  : "text-muted-foreground hover:text-white"
+              }`}
+            >
+              Projects
             </button>
           </div>
 
