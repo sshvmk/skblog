@@ -84,14 +84,14 @@ const Index = () => {
                   >
                     <FaGithub className="w-3.5 h-3.5" />
                   </a>
-                  {/* <a 
-                    href="https://instagram.com/sshvmk" 
+                  <a 
+                    href="https://www.linkedin.com/in/shivamkushwaha27/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
-                    <FaInstagram className="w-3.5 h-3.5" />
-                  </a> */}
+                    <FaLinkedin className="w-3.5 h-3.5" />
+                  </a>
                 </div>
                 
                 <div className="mt-2 sm:mt-4">
@@ -103,7 +103,7 @@ const Index = () => {
 
                   <div className="flex flex-nowrap items-center gap-x-1.5 sm:gap-x-2 text-xs sm:text-sm mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
                     {/* <span className="font-semibold text-foreground"><i></i></span> */}
-                    <span className="text-orange-400 dark:text-orange-400 font-medium">dm's open !</span>
+                    <span className="text-orange-400 dark:text-orange-400 font-medium">text me here !</span>
                     <a 
                       href="https://x.com/sshvmk" 
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
@@ -112,14 +112,14 @@ const Index = () => {
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a>
                     <span className="text-foreground/60">|</span>
-                    <a 
+                    {/* <a 
                       href="https://www.linkedin.com/in/shivamkushwaha27/" 
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       LinkedIn
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
-                    </a>
-                    <span className="text-foreground/60">|</span>
+                    </a> */}
+                    {/* <span className="text-foreground/60">|</span> */}
                     <a 
                       href="mailto:shivamkush.2000@gmail.com" 
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
