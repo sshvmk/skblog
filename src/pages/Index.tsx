@@ -5,13 +5,13 @@ import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 
 const PLACEHOLDER_POSTS = [
-  {
-    title: "Dummy",
-    excerpt: "This is a dummy blog post to test the blog functionality. It contains various types of content to demonstrate the different features available.",
-    date: "2024-12-19",
-    readingTime: "3 min read",
-    slug: "dummy"
-  },
+  // {
+  //   title: "Dummy",
+  //   excerpt: "This is a dummy blog post to test the blog functionality. It contains various types of content to demonstrate the different features available.",
+  //   date: "2024-12-19",
+  //   readingTime: "3 min read",
+  //   slug: "dummy"
+  // },
   // {
   //   title: "Understanding Category Theory in TypeScript",
   //   excerpt: "Exploring functional programming concepts and category theory implementation in TypeScript...",
@@ -176,16 +176,6 @@ const Index = () => {
           {/* Tab Bar */}
           <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4">
             <button
-              onClick={() => setActiveTab("experience")}
-              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
-                activeTab === "experience"
-                  ? "text-orange-500"
-                  : "text-muted-foreground hover:text-white"
-              }`}
-            >
-              Experience
-            </button>
-            <button
               onClick={() => setActiveTab("posts")}
               className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
                 activeTab === "posts"
@@ -194,6 +184,16 @@ const Index = () => {
               }`}
             >
               Posts
+            </button>
+            <button
+              onClick={() => setActiveTab("experience")}
+              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+                activeTab === "experience"
+                  ? "text-orange-500"
+                  : "text-muted-foreground hover:text-white"
+              }`}
+            >
+              Experience
             </button>
             <button
               onClick={() => setActiveTab("projects")}
@@ -209,6 +209,20 @@ const Index = () => {
 
           {/* Tab Content */}
           <div className="min-h-[200px]">
+            {activeTab === "posts" && (
+              <div className="space-y-6">
+                {PLACEHOLDER_POSTS.length > 0 ? (
+                  PLACEHOLDER_POSTS.map((post) => (
+                    <BlogCard key={post.title} {...post} />
+                  ))
+                ) : (
+                  <div className="text-center py-8">
+                    <p className="text-muted-foreground">posting here soon... WIP</p>
+                  </div>
+                )}
+              </div>
+            )}
+
             {activeTab === "experience" && (
               <div className="space-y-4">
                 <div>
@@ -235,16 +249,8 @@ const Index = () => {
             )}
 
             {activeTab === "projects" && (
-              <div className="grid gap-3">
-                <p className="text-sm text-muted-foreground">This section is W.I.P.</p>
-              </div>
-            )}
-
-            {activeTab === "posts" && (
-              <div className="space-y-6">
-                {PLACEHOLDER_POSTS.map((post) => (
-                  <BlogCard key={post.title} {...post} />
-                ))}
+              <div className="text-center py-8">
+                <p className="text-muted-foreground">adding soon</p>
               </div>
             )}
           </div>
