@@ -7,7 +7,15 @@ const About = () => {
         <div className="space-y-8">
           <section>
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
-              <img src='/cat.jpeg' width='200' className="rounded-lg flex-shrink-0"></img>
+              <img 
+                src='/cat.jpeg' 
+                width='200' 
+                height='200'
+                className="rounded-lg flex-shrink-0"
+                loading="lazy"
+                decoding="async"
+                alt="Profile"
+              />
               {/* <p className="text-lg text-center md:text-left"> */}
               <p className="text-lg text-left">
                 Hi, 

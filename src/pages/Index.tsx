@@ -2,20 +2,58 @@ import { BlogCard } from "@/components/blog-card";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
-import { useState } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 
-// Book Cover Component
+// Book Cover Component with lazy loading
 const BookCover = ({ coverImage }: { coverImage: string }) => {
   const [imageError, setImageError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window && imgRef.current) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsInView(true);
+              observer.disconnect();
+            }
+          });
+        },
+        { rootMargin: '50px' } // Start loading 50px before image enters viewport
+      );
+
+      observer.observe(imgRef.current);
+
+      return () => {
+        if (imgRef.current) {
+          observer.unobserve(imgRef.current);
+        }
+      };
+    } else {
+      // Fallback: load immediately if IntersectionObserver not supported
+      setIsInView(true);
+    }
+  }, []);
 
   if (coverImage && !imageError) {
     return (
-      <img
-        src={coverImage}
-        alt="Book cover"
-        className="w-full h-full object-cover"
-        onError={() => setImageError(true)}
-      />
+      <div ref={imgRef} className="w-full h-full">
+        {isInView ? (
+          <img
+            src={coverImage}
+            alt="Book cover"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="w-full h-full bg-muted animate-pulse" />
+        )}
+      </div>
     );
   }
 
@@ -192,10 +230,10 @@ const Index = () => {
         {/* Horizontal Tab Navigation */}
         <section className="mt-4">
           {/* Tab Bar */}
-          <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4">
+          <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4 overflow-hidden">
             <button
               onClick={() => setActiveTab("posts")}
-              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
                 activeTab === "posts"
                   ? "text-orange-500"
                   : "text-muted-foreground hover:text-white"
@@ -205,7 +243,7 @@ const Index = () => {
             </button>
             <button
               onClick={() => setActiveTab("experience")}
-              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
                 activeTab === "experience"
                   ? "text-orange-500"
                   : "text-muted-foreground hover:text-white"
@@ -215,7 +253,7 @@ const Index = () => {
             </button>
             <button
               onClick={() => setActiveTab("projects")}
-              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
                 activeTab === "projects"
                   ? "text-orange-500"
                   : "text-muted-foreground hover:text-white"
@@ -225,7 +263,7 @@ const Index = () => {
             </button>
             <button
               onClick={() => setActiveTab("bookshelf")}
-              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
                 activeTab === "bookshelf"
                   ? "text-orange-500"
                   : "text-muted-foreground hover:text-white"
@@ -283,7 +321,9 @@ const Index = () => {
             )}
 
             {activeTab === "bookshelf" && (
-              <BookshelfView />
+              <Suspense fallback={<div className="text-center py-8 text-muted-foreground">Loading bookshelf...</div>}>
+                <BookshelfView />
+              </Suspense>
             )}
           </div>
         </section>
