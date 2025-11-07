@@ -4,6 +4,24 @@ import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 
+// Book Cover Component
+const BookCover = ({ coverImage }: { coverImage: string }) => {
+  const [imageError, setImageError] = useState(false);
+
+  if (coverImage && !imageError) {
+    return (
+      <img
+        src={coverImage}
+        alt="Book cover"
+        className="w-full h-full object-cover"
+        onError={() => setImageError(true)}
+      />
+    );
+  }
+
+  return null;
+};
+
 const PLACEHOLDER_POSTS = [
   // {
   //   title: "Dummy",
@@ -205,6 +223,16 @@ const Index = () => {
             >
               Projects
             </button>
+            <button
+              onClick={() => setActiveTab("bookshelf")}
+              className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out ${
+                activeTab === "bookshelf"
+                  ? "text-orange-500"
+                  : "text-muted-foreground hover:text-white"
+              }`}
+            >
+              Bookshelf
+            </button>
           </div>
 
           {/* Tab Content */}
@@ -253,11 +281,59 @@ const Index = () => {
                 <p className="text-muted-foreground">adding soon</p>
               </div>
             )}
+
+            {activeTab === "bookshelf" && (
+              <BookshelfView />
+            )}
           </div>
         </section>
       </main>
       {/* <Footer /> // Removed */}
     </>
+  );
+};
+
+// Books data - just cover image paths
+// To add book cover images:
+// 1. Place images in the /public/books/ folder
+// 2. Add the path: "/books/your-image.jpg" (or .webp, .png, etc.)
+// 3. Or use an external URL: "https://example.com/book-cover.jpg"
+const BOOKS = [
+  "/books/ret-ki-machhali.webp",
+  "/books/we.jpg",
+  "/books/perception.jpg",
+  "/books/outsider_camus.webp",
+  "/books/khidki.jpg",
+  "/books/capitalism.jpg",
+  "/books/BendInTheRiver.jpeg",
+];
+
+const BookshelfView = () => {
+  return (
+    <div className="py-2">
+      <div className="mb-3">
+        <h2 className="text-xl font-bold mb-1 text-foreground">My Bookshelf</h2>
+        <p className="text-lg text-muted-foreground">2025</p>
+      </div>
+
+      {/* Books Grid - Clean Cover Only */}
+      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1.5 sm:gap-2">
+        {BOOKS.map((coverImage, index) => (
+          <div
+            key={index}
+            className="group relative aspect-[2/3] overflow-hidden rounded-sm transition-transform duration-300 hover:scale-105 hover:z-10"
+          >
+            <BookCover coverImage={coverImage} />
+          </div>
+        ))}
+      </div>
+
+      {/* Stats */}
+      <div className="mt-4 text-xs">
+        <span className="text-muted-foreground">Total Books: </span>
+        <span className="font-semibold text-orange-500">{BOOKS.length}</span>
+      </div>
+    </div>
   );
 };
 
