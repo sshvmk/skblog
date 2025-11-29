@@ -11,7 +11,7 @@ export function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
       {/* <Header /> // Removed */}
-      <main className="flex-grow container mx-auto px-4 py-8 pb-16">
+      <main className="flex-grow container mx-auto px-4 pt-4 pb-16">
         {children}
       </main>
       <Footer />

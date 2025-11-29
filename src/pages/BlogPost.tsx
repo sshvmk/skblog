@@ -336,7 +336,7 @@ const BlogPost = () => {
 
   return (
     <>
-      <main className="container max-w-xl py-12">
+      <main className="container max-w-xl pb-12">
         <article>
           {/* Back Navigation */}
           <div className="mb-4">
