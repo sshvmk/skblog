@@ -61,13 +61,13 @@ const BookCover = ({ coverImage }: { coverImage: string }) => {
 };
 
 const PLACEHOLDER_POSTS = [
-  // {
-  //   title: "Dummy",
-  //   excerpt: "This is a dummy blog post to test the blog functionality. It contains various types of content to demonstrate the different features available.",
-  //   date: "2024-12-19",
-  //   readingTime: "3 min read",
-  //   slug: "dummy"
-  // },
+  {
+    title: "26 things for 2026",
+    excerpt: "A list of 26 things I want to do and accomplish in 2026 to make the next year fulfilling and satisfying.",
+    date: "2025-01-01",
+    readingTime: "5 min read",
+    slug: "26-things-for-2026"
+  },
   // {
   //   title: "Understanding Category Theory in TypeScript",
   //   excerpt: "Exploring functional programming concepts and category theory implementation in TypeScript...",
@@ -107,9 +107,9 @@ const Index = () => {
             {/* <ThemeToggle /> */}
           </div>
           {/* <p className="text-2xl text-foreground/90 leading-relaxed"> */}
-            {/* i write about AI/ML, math & everything in technology that piques my interest.
+          {/* i write about AI/ML, math & everything in technology that piques my interest.
           </p> */}
-          
+
           {/* Details Section */}
           <div className="mt-8 p-3 sm:p-6 border-2 border-orange-700/20 rounded-lg bg-background/50 backdrop-blur-sm">
             <div className="flex items-center gap-2 sm:gap-6">
@@ -122,34 +122,34 @@ const Index = () => {
                   </div>
                   <ThemeToggle />
                 </div>
-                
+
                 <div className="flex items-center gap-1.5 sm:gap-2 mt-2 sm:mt-4">
-                  <a 
-                    href="https://x.com/sshvmk" 
-                    target="_blank" 
+                  <a
+                    href="https://x.com/sshvmk"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-blue-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
                     <FaXTwitter className="w-3.5 h-3.5" />
                   </a>
-                  <a 
-                    href="https://github.com/sshvmk" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/sshvmk"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
                     <FaGithub className="w-3.5 h-3.5" />
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/shivamkushwaha27/" 
-                    target="_blank" 
+                  <a
+                    href="https://www.linkedin.com/in/shivamkushwaha27/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground hover:text-orange-400 transition-colors p-1 sm:p-2 rounded-md bg-foreground/10 hover:bg-foreground/20"
                   >
                     <FaLinkedin className="w-3.5 h-3.5" />
                   </a>
                 </div>
-                
+
                 <div className="mt-2 sm:mt-4">
                   <p className="text-sm sm:text-base text-foreground/90 line-clamp-5 sm:line-clamp-none">
                     building ML models for a living. interests - ai, math, poetry, philosophy, architecture, nature and more
@@ -160,8 +160,8 @@ const Index = () => {
                   <div className="flex flex-nowrap items-center gap-x-1.5 sm:gap-x-2 text-xs sm:text-sm mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
                     {/* <span className="font-semibold text-foreground"><i></i></span> */}
                     <span className="text-orange-400 dark:text-orange-400 font-medium">text me here !</span>
-                    <a 
-                      href="https://x.com/sshvmk" 
+                    <a
+                      href="https://x.com/sshvmk"
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       X/Twitter
@@ -176,8 +176,8 @@ const Index = () => {
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a> */}
                     {/* <span className="text-foreground/60">|</span> */}
-                    <a 
-                      href="mailto:shivamkush.2000@gmail.com" 
+                    <a
+                      href="mailto:shivamkush.2000@gmail.com"
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Email
@@ -188,32 +188,32 @@ const Index = () => {
 
                   <div className="flex flex-nowrap items-center gap-x-1 sm:gap-x-1 text-xs sm:text-sm mt-1 sm:mt-2 whitespace-nowrap overflow-x-auto pr-4">
                     {/* <span className="font-semibold text-foreground"><i></i></span> */}
-                    <a 
-                      href="https://substack.com/@sshvmk" 
+                    <a
+                      href="https://substack.com/@sshvmk"
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Substack
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a>
                     <span className="text-foreground/60">|</span>
-                    <a 
-                      href="https://sshvmk.github.io/notes/" 
+                    <a
+                      href="https://sshvmk.github.io/notes/"
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Notes
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a>
                     <span className="text-foreground/60">|</span>
-                    <a 
-                      href="https://www.goodreads.com/user/show/193017075" 
+                    <a
+                      href="https://www.goodreads.com/user/show/193017075"
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Goodreads
                       <span className="text-orange-500/60 group-hover:translate-x-0.5 transition-transform ml-0.5 sm:ml-1">→</span>
                     </a>
                     <span className="text-foreground/60">|</span>
-                    <a 
-                      href="https://boxd.it/g7Mlb" 
+                    <a
+                      href="https://boxd.it/g7Mlb"
                       className="text-foreground hover:text-orange-400 transition-colors group inline-flex items-center"
                     >
                       Letterboxd
@@ -224,7 +224,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
+
         </section>
 
         {/* Horizontal Tab Navigation */}
@@ -233,41 +233,37 @@ const Index = () => {
           <div className="flex bg-background/50 backdrop-blur-sm border border-orange-200/20 dark:border-orange-800/20 rounded-lg p-1 mb-4 overflow-hidden">
             <button
               onClick={() => setActiveTab("posts")}
-              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
-                activeTab === "posts"
-                  ? "text-orange-500"
-                  : "text-muted-foreground hover:text-white"
-              }`}
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${activeTab === "posts"
+                ? "text-orange-500"
+                : "text-muted-foreground hover:text-white"
+                }`}
             >
               Posts
             </button>
             <button
               onClick={() => setActiveTab("experience")}
-              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
-                activeTab === "experience"
-                  ? "text-orange-500"
-                  : "text-muted-foreground hover:text-white"
-              }`}
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${activeTab === "experience"
+                ? "text-orange-500"
+                : "text-muted-foreground hover:text-white"
+                }`}
             >
               Experience
             </button>
             <button
               onClick={() => setActiveTab("projects")}
-              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
-                activeTab === "projects"
-                  ? "text-orange-500"
-                  : "text-muted-foreground hover:text-white"
-              }`}
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${activeTab === "projects"
+                ? "text-orange-500"
+                : "text-muted-foreground hover:text-white"
+                }`}
             >
               Projects
             </button>
             <button
               onClick={() => setActiveTab("bookshelf")}
-              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${
-                activeTab === "bookshelf"
-                  ? "text-orange-500"
-                  : "text-muted-foreground hover:text-white"
-              }`}
+              className={`flex-1 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 ease-out truncate min-w-0 ${activeTab === "bookshelf"
+                ? "text-orange-500"
+                : "text-muted-foreground hover:text-white"
+                }`}
             >
               Bookshelf
             </button>
@@ -290,26 +286,70 @@ const Index = () => {
             )}
 
             {activeTab === "experience" && (
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium">Data Scientist • Paytm</h3>
-                  <p className="text-muted-foreground">Feb 2024 - Present</p>
-                  <p className="text-sm"> - Built and integrated 10+ lender-specific models into a unified real-time Recommendation Engine framework for Personal Loans product.</p>
-                  <p className="text-sm"> - Achieved a 30% reduction in lead count while maintaining lead-to-loan ratios and doubled the conversion rate for 5+ lender journey.</p>
-                  <p className="text-sm"> - Led end-to-end development of a Look-alike Identification Model, delivering a 72% capture rate in the top 3 deciles.</p>
-                  <p className="text-sm"> - Designed a cohort identification model to isolate high-value customer groups with a 4x funnel rate, enabling targeted marketing campaigns.</p>
-                  <p className="text-sm"> - Developed an NLP-based pipeline to parse SMS data and extract features for downstream model training.</p>
-                  <p className="text-sm"> - Previously, I worked on NLP pipeline solutioning for voice bots.</p>
+              <div className="relative border-l border-muted pl-6 ml-2 space-y-8 py-2">
+                {/* Paytm Experience */}
+                <div className="relative">
+                  <div className="absolute -left-[31px] mt-1.5 h-3.5 w-3.5 rounded-full border-2 border-orange-500 bg-background" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                    <h3 className="text-base font-semibold text-foreground">Data Scientist</h3>
+                    <span className="text-xs font-medium text-muted-foreground bg-secondary/50 px-2 py-0.5 rounded-full">Feb 2024 - Present</span>
+                  </div>
+                  <div className="mb-3">
+                    <span className="text-sm font-medium text-orange-500">Paytm</span>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+                    <li className="flex gap-2">
+                      <span className="text-orange-500/70 mt-1.5 text-[10px]">•</span>
+                      <span>Built and integrated 10+ lender-specific models into a unified real-time Recommendation Engine framework for Personal Loans product.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-orange-500/70 mt-1.5 text-[10px]">•</span>
+                      <span>Achieved a 30% reduction in lead count while maintaining lead-to-loan ratios and doubled the conversion rate for 5+ lender journey.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-orange-500/70 mt-1.5 text-[10px]">•</span>
+                      <span>Led end-to-end development of a Look-alike Identification Model, delivering a 72% capture rate in the top 3 deciles.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-orange-500/70 mt-1.5 text-[10px]">•</span>
+                      <span>Designed a cohort identification model to isolate high-value customer groups with a 4x funnel rate, enabling targeted marketing campaigns.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-orange-500/70 mt-1.5 text-[10px]">•</span>
+                      <span>Developed an NLP-based pipeline to parse SMS data and extract features for downstream model training.</span>
+                    </li>
+                  </ul>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium">Data Scientist • Anahit Pvt Ltd (Fintech startup)</h3>
-                  <p className="text-muted-foreground">July 2023 - Dec 2023</p>
-                  <p className="text-sm">Major work was to study and build macro indicators such as recession indicator, global liquidity indicator, etc for financial markets. Also worked on finding correlation and catching trends across all major asset classes.</p>
+
+                {/* Anahit Experience */}
+                <div className="relative">
+                  <div className="absolute -left-[31px] mt-1.5 h-3.5 w-3.5 rounded-full border-2 border-orange-500/50 bg-background" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                    <h3 className="text-base font-semibold text-foreground">Data Scientist</h3>
+                    <span className="text-xs font-medium text-muted-foreground bg-secondary/50 px-2 py-0.5 rounded-full">July 2023 - Dec 2023</span>
+                  </div>
+                  <div className="mb-3">
+                    <span className="text-sm font-medium text-orange-500">Anahit Pvt Ltd</span>
+                    <span className="text-xs text-muted-foreground ml-1">(Fintech startup)</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Major work was to study and build macro indicators such as recession indicator, global liquidity indicator, etc for financial markets. Also worked on finding correlation and catching trends across all major asset classes.
+                  </p>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium">Machine Learning Intern • NSUT Central AI Lab</h3>
-                  <p className="text-muted-foreground">2022 - 2024</p>
-                  <p className="text-sm">Majorly worked on CNN and RNN models.</p>
+
+                {/* NSUT Experience */}
+                <div className="relative">
+                  <div className="absolute -left-[31px] mt-1.5 h-3.5 w-3.5 rounded-full border-2 border-orange-500/30 bg-background" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                    <h3 className="text-base font-semibold text-foreground">Machine Learning Intern</h3>
+                    <span className="text-xs font-medium text-muted-foreground bg-secondary/50 px-2 py-0.5 rounded-full">2022 - 2024</span>
+                  </div>
+                  <div className="mb-3">
+                    <span className="text-sm font-medium text-orange-500">NSUT Central AI Lab</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Majorly worked on CNN and RNN models.
+                  </p>
                 </div>
               </div>
             )}
