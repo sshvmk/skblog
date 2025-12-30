@@ -21,7 +21,7 @@ const BLOG_POSTS = {
           {
             text: (
               <span>
-                Make <span className="bg-foreground text-transparent select-none px-1">40 Lakhs</span> this year
+                Make <span className="bg-foreground text-transparent select-none px-1">40 Lakhs</span> amount this year
               </span>
             ),
             completed: false,
@@ -40,7 +40,12 @@ const BLOG_POSTS = {
           { text: "A solo trip to Nepal", completed: false, category: "Travel" },
           { text: "Grow X to 5k + followers", completed: false, category: "Growth" },
           { text: "Get below 15% body fat", completed: false, category: "Health" },
-          { text: "Bench press 0.75x of my body weight", completed: false, category: "Health" },
+          { 
+            text: "Bench press my body weight", 
+            completed: false, 
+            category: "Health",
+            update: "Earlier it was 'bench press 0.75x of my body weight'. I achieved this on 30 Dec 2025"
+          },
           {
             text: (
               <span>
@@ -54,7 +59,7 @@ const BLOG_POSTS = {
           { text: "Get better at playing table tennis", completed: false, category: "Life" },
           { text: "Take a swimming course in summer", completed: false, category: "Health" },
           { text: "Complete a 50 day no-sugar challenge", completed: false, category: "Health" },
-          { text: "Work hard on family business and take it online", completed: false, category: "Growth" },
+          { text: "Work on family business and take it online", completed: false, category: "Growth" },
           { text: "Run a sub-45 minute 10k", completed: false, category: "Health" },
           { text: "Complete a 10-day digital detox", completed: false, category: "Life" }
         ]
@@ -152,7 +157,7 @@ Tabs.Panel = ({ children, id }) => {
 };
 
 // Goals Display component for the 26 things post
-const GoalsDisplay = ({ items }: { items: { text: string | React.ReactNode; completed: boolean; category?: string }[] }) => {
+const GoalsDisplay = ({ items }: { items: { text: string | React.ReactNode; completed: boolean; category?: string; update?: string }[] }) => {
   const completedCount = items.filter(i => i.completed).length;
   const totalCount = items.length;
   const progress = (completedCount / totalCount) * 100;
@@ -247,8 +252,8 @@ const GoalsDisplay = ({ items }: { items: { text: string | React.ReactNode; comp
         ))}
       </div>
 
-      {/* Compact Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      {/* Compact Grid Layout - Flexbox for natural item heights */}
+      <div className="flex flex-wrap gap-2">
         {items.map((item, index) => {
           const colors = item.category ? categoryColors[item.category] : defaultColor;
 
@@ -257,6 +262,7 @@ const GoalsDisplay = ({ items }: { items: { text: string | React.ReactNode; comp
               key={index}
               className={`
                 relative p-2.5 rounded-lg border transition-all duration-300 group hover:shadow-sm
+                w-full sm:w-[calc(50%-0.25rem)] flex-shrink-0
                 ${item.completed
                   ? "bg-orange-50/50 dark:bg-orange-950/20 border-orange-200 dark:border-orange-800"
                   : `${colors.bg} ${colors.border} hover:border-opacity-80`
@@ -288,6 +294,13 @@ const GoalsDisplay = ({ items }: { items: { text: string | React.ReactNode; comp
                   `}>
                     {item.text}
                   </p>
+                  {item.update && (
+                    <div className="mt-1.5 pt-1.5 border-t border-orange-200/30 dark:border-orange-800/30">
+                      <p className="text-xs text-muted-foreground italic leading-relaxed">
+                        <span className="text-orange-500/80 font-medium">Update:</span> {item.update}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {item.completed && (
